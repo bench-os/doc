@@ -1,4 +1,8 @@
-# Operating Systems
+---
+layout: page
+title: Operating Systems
+permalink: /os/
+---
 
 ## RIOT-OS
 

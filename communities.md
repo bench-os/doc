@@ -1,4 +1,8 @@
-# Communities
+---
+layout: page
+title: Communities
+permalink: /communities/
+---
 
 ## RIOT-OS
 

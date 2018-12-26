@@ -1,4 +1,8 @@
-# Boards
+---
+layout: page
+title: Boards
+permalink: /boards/
+---
 
 ## Zolertia RE Mote
 

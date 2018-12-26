@@ -1,4 +1,8 @@
-# Roadmap
+---
+layout: page
+title: Roadmap
+permalink: /roadmap/
+---
 
 This document presents a broad overview of our thesis.
 
