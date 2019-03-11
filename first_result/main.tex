@@ -57,18 +57,22 @@ Feasability of a Benchmarking Framework for Context-Switching in RTOS
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
-\end{abstract}
+%\begin{abstract}
+%\end{abstract}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{INTRODUCTION}
+\section*{INTRODUCTION}
+One of the goal of our thesis is to write a framework able to compute the context switching time of different tasks of an application.
+The first section describes the framework we built on different OS's.
+The second section talks about reference measurements we performed to assess our framework performances.
+Section 3 shows the impact of the framework on the application performances.
 
 \section{BENCHMARKING FRAMEWORK}
 
-Every time a task run, it will call the \texttt{bench\_ping} function providing its process ID.
-The framework will check if a context switch happened by comparing the process ID with the previous one.
-If the IDs doesn't match, the framework will compute the elapsed time and print it.
+Every time a task runs, it calls the \texttt{bench\_ping} function providing its process ID.
+The framework then checks if a context switch happened by comparing the active process ID with the previous one.
+If the IDs dont match, it means that the active task has changed and the framework will compute the elapsed time and print it.
 
 The source code of the benchmarking framework implemented in Contiki can be found in listing \ref{lst:code}.
 
@@ -120,7 +124,11 @@ int check_change(void) {
 \end{lstlisting}
 
 \section{\label{sec:ref}REFERENCE MEASUREMENT}
-The first step was to perform a measurement that will be used as a reference point. In order to do this measurement, the Pocket Science Lab device from PSLab.io was used.
+% why do we need a reference measurement?
+% what does it bring?
+
+The first step is to perform a measurement that will be used as a reference point.
+In order to perform this measurement, we used the Pocket Science Lab device from PSLab.io.
 
 \begin{figure}[!h]
     \centering
@@ -129,11 +137,22 @@ The first step was to perform a measurement that will be used as a reference poi
     \label{fig:pslab}
 \end{figure}
 
-The application consists of two tasks. The first task set a GPIO up, wait for 1ms then set the same GPIO down. The other task do the same but an other GPIO. Using the collaborative scheduling, each task run after the other.
+% what application?
+% we should explain the point of the pocket lab and a bit of how it works
+% is GPIO defined somewhere before that?
 
-To use the collaborative scheduling, Contiki was used to run the application.
+The application consists of two tasks.
+The first task sets a GPIO up, waits for 1ms then sets the same GPIO down.
+The other task does the same but with an other GPIO.
+Using the collaborative scheduling, each task runs after the other.
 
-Using the Pocket Science Lab device, we were able to measure the voltage of the two GPIO used by the application. In the Fig.\ref{fig:ref}, we can see each GPIO being up and down for 1ms. We can also see during a small amount of time that none of the GPIO are up. The context switching happens during this period. No task is in the foreground during this time.
+In order to have a collaborative scheduling, we used Contiki to run the application.
+
+Using the Pocket Science Lab device, we were able to measure the voltage of the two GPIO's used by the application.
+In the Fig.\ref{fig:ref}, we can see each GPIO being up and down for 1ms.
+We can also see during a small amount of time that none of the GPIO's are up.
+The context switch happens during this period.
+No task is in the foreground during this time.
 
 
 \begin{figure}[!h]
@@ -145,11 +164,13 @@ Using the Pocket Science Lab device, we were able to measure the voltage of the 
 
 
 
-Using this reference, we can see how our framework change the performance of the application. Ideally, the time between two tasks should not change with our framework.
+Using this reference, we can see how our framework change the performances of the application.
+Ideally, the time between two tasks should not change with our framework.
 
 \section{EMBEDDED FRAMEWORK OVERHEAD}
 
-Using the Pocket Science Lab device, we did the same experience describe in section \ref{sec:ref}. Fig.\ref{fig:framework_overhead} shows the results of the experiment.
+Using the Pocket Science Lab device, we did the same experience described in section \ref{sec:ref}.
+Fig.\ref{fig:framework_overhead} shows the results of the experiment.
 
 \begin{figure}[!h]
     \centering
@@ -158,7 +179,8 @@ Using the Pocket Science Lab device, we did the same experience describe in sect
     \label{fig:framework_overhead}
 \end{figure}
 
-Table \ref{table:context_switching_times} compares the context switching time with and without our benchmarking framework. We can see that the framework add a huge overhead.
+Table \ref{table:context_switching_times} compares the context switching time with and without our benchmarking framework.
+We can see that the framework adds a huge overhead.
 
 
 \begin{table}[!h]
