@@ -79,7 +79,7 @@ Section 3 shows the impact of the framework on the application performances.
 
 Every time a task runs, it calls the \texttt{bench\_ping} function providing its process ID.
 The framework then checks if a context switch happened by comparing the active process ID with the previous one.
-If the IDs don't match, it means that the active task has changed and the framework will compute the elapsed time and print it.
+If the IDs do not match, it means that the active task has changed and the framework will compute the elapsed time and print it.
 
 The source code of the benchmarking framework implemented in Contiki can be found in listing \ref{lst:code}.
 
