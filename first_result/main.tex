@@ -62,17 +62,24 @@ Feasability of a Benchmarking Framework for Context-Switching in RTOS
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{INTRODUCTION}
-One of the goal of our thesis is to write a framework able to compute the context switching time of different tasks of an application.
+\section{INTRODUCTION}
+% Explain the motivation
+One of the goal of our thesis is to write a framework able to compute the context switching time between different tasks of an application.
+Commonly, the context switching is measured using an oscilloscope.
+However, that kind of hardware is costly and not everyone can have access to such device.
+In order to compute the context switching time without an oscilloscope, we developped a framework.
+Its implementation and its usage are discussed in this paper.
+
 The first section describes the framework we built on different OS's.
 The second section talks about reference measurements we performed to assess our framework performances.
 Section 3 shows the impact of the framework on the application performances.
 
-\section{BENCHMARKING FRAMEWORK}
+
+\section{\label{sec:bench}BENCHMARKING FRAMEWORK}
 
 Every time a task runs, it calls the \texttt{bench\_ping} function providing its process ID.
 The framework then checks if a context switch happened by comparing the active process ID with the previous one.
-If the IDs dont match, it means that the active task has changed and the framework will compute the elapsed time and print it.
+If the IDs don't match, it means that the active task has changed and the framework will compute the elapsed time and print it.
 
 The source code of the benchmarking framework implemented in Contiki can be found in listing \ref{lst:code}.
 
@@ -124,10 +131,9 @@ int check_change(void) {
 \end{lstlisting}
 
 \section{\label{sec:ref}REFERENCE MEASUREMENT}
-% why do we need a reference measurement?
-% what does it bring?
-
 The first step is to perform a measurement that will be used as a reference point.
+This reference point will be used to assess if our benchmarking framework compute the correct context switching values and if it adds any overhead during the process.
+
 In order to perform this measurement, we used the Pocket Science Lab device from PSLab.io.
 
 \begin{figure}[!h]
@@ -137,10 +143,10 @@ In order to perform this measurement, we used the Pocket Science Lab device from
     \label{fig:pslab}
 \end{figure}
 
-% what application?
-% we should explain the point of the pocket lab and a bit of how it works
-% is GPIO defined somewhere before that?
+This board comes with a built-in oscilloscope that we used to perform our measurements.
+A real oscilloscope could have been used but, in the context of this work, no such hardware was available.
 
+Our experience was made on a simple application.
 The application consists of two tasks.
 The first task sets a GPIO up, waits for 1ms then sets the same GPIO down.
 The other task does the same but with an other GPIO.
@@ -185,7 +191,7 @@ We can see that the framework adds a huge overhead.
 
 \begin{table}[!h]
     \centering
-    \caption{Context switching times measured with the Pocket Science Lab device}
+    \caption{Context switching times measured with the Pocket Science Lab device with and without the framework}
     \begin{tabular}{llll}
         \cline{2-4}
         & Mean ($\mu s$) & Median ($\mu s$) & Mode ($\mu s$) \\ \cline{2-4}
@@ -196,12 +202,30 @@ We can see that the framework adds a huge overhead.
 \end{table}
 
 \section{PYTHON ALTERNATIVE}
+Considering that our benchmarking framework adds a large overhead, we tried a new alternative.
 
-    
+The idea is to perform every computational task on a computer instead of the board.
+Using the UART protocol over USB, the board sends a single byte containing the process ID that is read by a Python script on the computer.
+In the same way described in section \ref{sec:bench} with the framework, the Python script computes the context switching.
 
+The motivations for using this alternative are:
+\begin{itemize}
+    \item Sending one byte of data over USB with UART have a smaller impact than computing the context switching time locally on the board;
+    \item Heavy computational tasks of the framework are done on the computer and not on the board;
+    \item Using Python3.7, we can achieve a time precision at the nanosecond.
+\end{itemize}
+
+A first drawback of this method is that the communication between the board and the computer using UART over USB adds a large amount of milliseconds that is counted in the context switching time by the Python script.
+A solution would be to compute this overhead added by the UART protocol and remove it from the computed values.
 
 \section{CONCLUSION}
+We have tried to create a benchmarking framework to compute the context switching time of a RTOS using different methodologies.
+We have started by implementing the framework inside the RTOS.
+We predicted that an overhead due to the serial output and the computational tasks made in the board would be present.
+However, the overhead was bigger than expected.
 
+Moreover, the capabilities of the board are not big enough to reach high timing precision.
+The next step of this work is to externalize the computation using Python and UART over USB.
 
 \addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
                                   % on the last page of the document manually. It shortens
