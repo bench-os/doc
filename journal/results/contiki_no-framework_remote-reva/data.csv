@@ -1,0 +1,18 @@
+TekScope, Version 1.8.7
+ Date-Time ,Thursday March 21 2019 08:01:03
+
+Measurement Results
+Name, Measurement, Label, Source, Mean',Min',Max',Pk-Pk',Std Dev',Population', Accum-Mean ,Accum-Min ,Accum-Max ,Accum-Pk-Pk ,Accum-Std Dev ,Accum-Population ,
+Meas1, Context Switching 1 to 2, Context Switching 1 to 2," Ch1 Ch2 ",14.68 us,14.68 us,14.68 us,0.000 s,0.000 s,1,1.382 ms,14.68 us,1.864 ms,1.850 ms,816.2 us,65, , , , , ,0, , , , , ,0
+
+Meas2, Context Switching 2 to 1, Context Switching 2 to 1," Ch2 Ch1 ",14.88 us,14.88 us,14.88 us,0.000 s,0.000 s,1,1.301 ms,-3.870 ms,2.205 ms,6.075 ms,1.042 ms,65, , , , , ,0, , , , , ,0
+
+Meas3, Time for task 1, Time for task 1," Ch1 ",1.003 ms,1.003 ms,1.003 ms,16.73 ns,6.991 ns,9,1.004 ms,1.003 ms,1.388 ms,385.6 us,22.32 us,298, , , , , ,0, , , , , ,0
+
+Meas4, Time for task 2, Time for task 2," Ch2 ",1.003 ms,1.003 ms,1.003 ms,130.8 ns,54.94 ns,9,1.003 ms,1.003 ms,1.067 ms,63.94 us,3.696 us,297, , , , , ,0, , , , , ,0
+
+Meas5, GPIO delay for task 1, GPIO delay for task 1," Ch1 ",14.30 ns,8.571 ns,25.39 ns,16.81 ns,6.584 ns,9,13.08 ns,8.527 ns,36.64 ns,28.11 ns,4.863 ns,297, , , , , ,0, , , , , ,0
+
+Meas6, GPIO delay for task 2, GPIO delay for task 2," Ch2 ",14.66 ns,9.367 ns,39.59 ns,30.22 ns,8.931 ns,10,13.16 ns,8.680 ns,39.59 ns,30.91 ns,5.782 ns,314, , , , , ,0, , , , , ,0
+
+
