@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+   <title>report</title>
+   <script type="text/javascript" src="/usr/local/tek/scopeapp/bin/stylesheets/jquery-1.8.2.min.js"></script>
+   <script type="text/javascript" src="/usr/local/tek/scopeapp/bin/stylesheets/easyzoom.js"></script>
+   <script src="/usr/local/tek/scopeapp/bin/stylesheets/ZoomImage1.js"></script>
+   <script type="text/javascript" src="/usr/local/tek/scopeapp/bin/stylesheets/event.js"></script>
+   <link type="text/css" href="/usr/local/tek/scopeapp/bin/stylesheets/measConfig.css" rel="stylesheet"/>
+  </head>
+  <body>
+   <div class="body" id="Container">
+    <div style="background-color: rgb(10,98,125);">
+     <div>
+      <h2 id="reportHeader">Measurement Report</h2>
+      <img src="/usr/local/tek/scopeapp/bin/stylesheets/Teklogo.png" class="ImageDiv"/>
+      <br>
+     </div>
+     <br>
+     <br>
+    </div>
+    <div>
+     <h2 id="dateTime">Monday  June 3  2019 04:58:16</h2>
+    </div>
+    <div>
+     <h2 id="sectionHeader">Setup Configuration</h2>
+     <div>
+      <table name="Scope Details" class="Table" id="Scope Details">
+       <thead>
+        <tr class="MeasName">
+         <th colspan="4">Scope Details</th>
+        </tr>
+        <tr>
+         <th class="ConfigHeader">Scope Model Number</th>
+         <th class="ConfigHeader">Scope Serial Number</th>
+         <th class="ConfigHeader">TekScope Version</th>
+         <th class="ConfigHeader">Scope Calibration Status</th>
+        </tr>
+       </thead>
+       <tr>
+        <td>MSO56</td>
+        <td>C012270</td>
+        <td>1.8.7
+</td>
+        <td>Pass</td>
+       </tr>
+      </table>
+      <br>
+      <table name="Probe Details - CH1" class="Table" id="Probe Details - CH1">
+       <thead>
+        <tr class="MeasName">
+         <th colspan="3">Probe Details - CH1</th>
+        </tr>
+        <tr>
+         <th class="ConfigHeader">Probe Type</th>
+         <th class="ConfigHeader">Probe Serial Number</th>
+         <th class="ConfigHeader">Probe Cal Status</th>
+        </tr>
+       </thead>
+       <tr>
+        <td>TPP1000</td>
+        <td>C120551</td>
+        <td>Pass</td>
+       </tr>
+      </table>
+      <br>
+      <table name="Probe Details - CH2" class="Table" id="Probe Details - CH2">
+       <thead>
+        <tr class="MeasName">
+         <th colspan="3">Probe Details - CH2</th>
+        </tr>
+        <tr>
+         <th class="ConfigHeader">Probe Type</th>
+         <th class="ConfigHeader">Probe Serial Number</th>
+         <th class="ConfigHeader">Probe Cal Status</th>
+        </tr>
+       </thead>
+       <tr>
+        <td>TPP1000</td>
+        <td>C120548</td>
+        <td>Pass</td>
+       </tr>
+      </table>
+      <br>
+     </div>
+    </div>
+    <div>
+     <h2 id="sectionHeader">Measurement Result Details</h2>
+     <div>
+      <table name="Measurement Result Details" class="Table" colspan="15">
+       <thead>
+        <tr>
+         <th>Name</th>
+         <th>Meas</th>
+         <th>Sources</th>
+         <th>Mean'</th>
+         <th>Min'</th>
+         <th>Max'</th>
+         <th>Pk-Pk'</th>
+         <th>Std Dev'</th>
+         <th>Pop'</th>
+         <th>Accum Mean</th>
+         <th>Accum Min</th>
+         <th>Accum Max</th>
+         <th>Accum Pk-Pk</th>
+         <th>Accum Std Dev</th>
+         <th>Accum Pop</th>
+        </tr>
+       </thead>
+       <tr>
+        <td>Meas1</td>
+        <td>Delay</td>
+        <td>Ch1 Ch2</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>0</td>
+        <td>30.96 us</td>
+        <td>30.87 us</td>
+        <td>31.08 us</td>
+        <td>212.3 ns</td>
+        <td>47.12 ns</td>
+        <td>1000</td>
+       </tr>
+       <tr>
+        <td>Meas2</td>
+        <td>Delay</td>
+        <td>Ch2 Ch1</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+        <td>0</td>
+        <td>27.70 us</td>
+        <td>27.58 us</td>
+        <td>27.83 us</td>
+        <td>247.7 ns</td>
+        <td>48.95 ns</td>
+        <td>1000</td>
+       </tr>
+      </table>
+      <br>
+     </div>
+    </div>
+    <div>
+     <h2 id="imageHeader">Views</h2>
+     <div id="imageDetails">
+      <div class="img">
+       <div class="desc">Time Domain View</div>
+       <a href="/media//E://results//reference-value//riot//z1/report_timedomainview1.png" class="Time Domain View">
+        <img src="/media//E://results//reference-value//riot//z1/report_timedomainview1.png" id="imageResolution"/>
+       </a>
+      </div>
+     </div>
+    </div>
+    <div>
+     <h2 id="imageHeader">Plots</h2>
+     <p id="sectionNullCheck">No Plots Available</p>
+    </div>
+    <div>
+     <h2 id="sectionSubHeader">Global Configuration</h2>
+     <div>
+      <table name="Global Configuration" class="Table" colspan="7">
+       <thead>
+        <tr>
+         <th>Gating</th>
+         <th>Jitter Separation Model</th>
+         <th>Dual Dirac Model</th>
+         <th>Display Unit Type</th>
+         <th>Standard Reference Levels</th>
+         <th>Jitter Reference Levels</th>
+         <th>Lock RJ</th>
+        </tr>
+       </thead>
+       <tr>
+        <td>None</td>
+        <td>SpectralOnly</td>
+        <td>PCIExpress</td>
+        <td>Seconds</td>
+        <td>Every Acquisition</td>
+        <td>First Acquisition</td>
+        <td>false</td>
+       </tr>
+      </table>
+     </div>
+     <br>
+    </div>
+    <div>
+     <h2 id="sectionSubHeader">Individual Measurement Configuration</h2>
+     <div>
+      <div>
+       <div>
+        <table name="Individual Measurement Configuration" class="MainTable">
+         <tr>
+          <th class="MeasName" colspan="12">Meas1 - Delay</th>
+         </tr>
+         <tr>
+          <th class="ConfigHeader" colspan="2">Ref Levels</th>
+          <th class="ConfigHeader" colspan="2">Ref Levels</th>
+          <th class="ConfigHeader" colspan="2">Edge</th>
+          <th class="ConfigHeader" colspan="2">Filter</th>
+          <th class="ConfigHeader" colspan="2">Configurations</th>
+          <th class="ConfigHeader" colspan="2">Gating</th>
+         </tr>
+         <tr>
+          <td class="itemsleft">Global Enabled</td>
+          <td class="itemsright">False</td>
+          <td class="itemsleft">Global Enabled</td>
+          <td class="itemsright">False</td>
+          <td class="itemsleft">From Edge</td>
+          <td class="itemsright">FallingEdge</td>
+          <td class="itemsleft">Filter Spec-High Pass(F1)</td>
+          <td class="itemsright">No Filter</td>
+          <td class="itemsleft">Custom Measurement Name</td>
+          <td class="itemsright">Delay</td>
+          <td class="itemsleft">Gating Type</td>
+          <td class="itemsright">None</td>
+         </tr>
+         <tr>
+          <td class="itemsleft">Base Top Method</td>
+          <td class="itemsright">Automatic</td>
+          <td class="itemsleft">Base Top Method</td>
+          <td class="itemsright">Automatic</td>
+          <td class="itemsleft">Search Direction</td>
+          <td class="itemsright">Forward</td>
+          <td class="itemsleft">Filter Spec-Low Pass(F2)</td>
+          <td class="itemsright">No Filter</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">RiseHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft">RiseHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft">To Edge</td>
+          <td class="itemsright">RisingEdge</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">RiseMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft">RiseMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">RiseLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft">RiseLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">FallHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft">FallHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">FallMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft">FallMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">FallLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft">FallLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="borderbottomleft">Hysteresis</td>
+          <td class="borderbottomright">5%</td>
+          <td class="borderbottomleft">Hysteresis</td>
+          <td class="borderbottomright">5%</td>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+         </tr>
+        </table>
+        <br>
+       </div>
+       <div>
+        <table name="Individual Measurement Configuration" class="MainTable">
+         <tr>
+          <th class="MeasName" colspan="12">Meas2 - Delay</th>
+         </tr>
+         <tr>
+          <th class="ConfigHeader" colspan="2">Ref Levels</th>
+          <th class="ConfigHeader" colspan="2">Ref Levels</th>
+          <th class="ConfigHeader" colspan="2">Edge</th>
+          <th class="ConfigHeader" colspan="2">Filter</th>
+          <th class="ConfigHeader" colspan="2">Configurations</th>
+          <th class="ConfigHeader" colspan="2">Gating</th>
+         </tr>
+         <tr>
+          <td class="itemsleft">Global Enabled</td>
+          <td class="itemsright">True</td>
+          <td class="itemsleft">Global Enabled</td>
+          <td class="itemsright">True</td>
+          <td class="itemsleft">From Edge</td>
+          <td class="itemsright">FallingEdge</td>
+          <td class="itemsleft">Filter Spec-High Pass(F1)</td>
+          <td class="itemsright">No Filter</td>
+          <td class="itemsleft">Custom Measurement Name</td>
+          <td class="itemsright">Delay</td>
+          <td class="itemsleft">Gating Type</td>
+          <td class="itemsright">None</td>
+         </tr>
+         <tr>
+          <td class="itemsleft">Base Top Method</td>
+          <td class="itemsright">Automatic</td>
+          <td class="itemsleft">Base Top Method</td>
+          <td class="itemsright">Automatic</td>
+          <td class="itemsleft">Search Direction</td>
+          <td class="itemsright">Forward</td>
+          <td class="itemsleft">Filter Spec-Low Pass(F2)</td>
+          <td class="itemsright">No Filter</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">RiseHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft">RiseHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft">To Edge</td>
+          <td class="itemsright">RisingEdge</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">RiseMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft">RiseMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">RiseLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft">RiseLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">FallHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft">FallHigh</td>
+          <td class="itemsright">90%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">FallMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft">FallMid</td>
+          <td class="itemsright">50%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="itemsleft">FallLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft">FallLow</td>
+          <td class="itemsright">10%</td>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+          <td class="itemsleft"/>
+          <td class="itemsright"/>
+         </tr>
+         <tr>
+          <td class="borderbottomleft">Hysteresis</td>
+          <td class="borderbottomright">5%</td>
+          <td class="borderbottomleft">Hysteresis</td>
+          <td class="borderbottomright">5%</td>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+          <td class="borderbottomleft"/>
+          <td class="borderbottomright"/>
+         </tr>
+        </table>
+        <br>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </body>
+ </html>
+</!DOCTYPE html>
