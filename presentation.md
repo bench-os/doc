@@ -9,7 +9,26 @@ theme: metropolis
 
 # Introduction
 
-This is an *introduction*.
+## Embedded systems
 
-- list one
-- list two
+## Objectives
+
+- Theoretical summary
+- Benchmarking tool
+
+## Theory
+
+Mindmap here
+
+# Why is this important
+
+# Developpement and implementation
+
+## Benchmark definition
+
+## RTOS
+
+## Metrics
+
+## Mutiple approaches
+
