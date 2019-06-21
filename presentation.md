@@ -42,25 +42,47 @@ TODO contact with communities mailing list
 
 > > "A tool designed to assess the performances of a system."
 
-In our case, a benchmarking tool to assess the performances of applications running on different RTOS
+In our case, a benchmarking tool to assess the performances of applications running on different RTOS.
 
 ## RTOS
 
-- Contiki
-- RIOT
-- (FreeRTOS)
+### Contiki
+- Cooperative scheduling
+- Event-driven
+
+### RIOT
+- Preemptive scheduling
+- Multithreading
 
 ## Metrics
 
+### Framework metric
 - Context switching time
 
-TODO cite others?
+### Other metrics
+- Interrupt latency
+- Memory usage
+- Power consumption
 
-## Mutiple approaches
+## Multiple approaches
 
-- Kernel approach
-- Extension approach
-- External devices approach
+### Kernel approach
+Implementing the framework in the RTOS kernel.
+
+- Tedious approach
+- Strongly platform-dependent
+
+### Extension approach
+Implementing the framework as a RTOS extension.
+
+- Contiki app and RIOT module
+- Internal clock
+
+### Devices approach
+Implementing the framework with external devices.
+
+- Pocket Science Lab board to measure the context switching time
+- Laptop to communicate with the PSLab
 
 # Results
 
@@ -68,8 +90,6 @@ TODO cite others?
 
 - Reference value
 - Oscilloscope
-- (Internal clock)
-- (External device)
 
 ---
 
