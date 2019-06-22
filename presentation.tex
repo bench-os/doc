@@ -50,8 +50,8 @@ TODO Mindmap here
 
 %%%
 
-\hypertarget{why-is-this-important}{%
-\section{Why is this important}\label{why-is-this-important}}
+\hypertarget{public-support-and-interest}{%
+\section{Public support and interest}\label{public-support-and-interest}}
 
 \begin{frame}{Benchmarking tool for RTOS applications}
 \protect\hypertarget{benchmarking-tool-for-rtos-applications}{}
@@ -65,24 +65,41 @@ TODO source
 \begin{frame}{Interest of the community}
 \protect\hypertarget{interest-of-the-community}{}
 
-TODO RIOT Summit 2018
+RIOT Summit 2018
 
 \end{frame}
 
 %%%
 
-\begin{frame}{link with communities}
-\protect\hypertarget{link-with-communities}{}
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.15]{assets/riotsummit.jpg}
+    %\caption{}
+    \end{figure}
+\end{frame}
 
-TODO contact with communities mailing list
+%%%
 
+\begin{frame}{Contact with the communities}
+\protect\hypertarget{contact-with-the-communities}{}
+
+\begin{itemize}
+\tightlist
+\item RIOT
+\item Contiki
+\item FreeRTOS
+\item Apache MyNewt
+\item mBed
+\item /r/embedded
+\end{itemize}
+\tightlist
 \end{frame}
 
 %%%
 
 \hypertarget{developpement-and-implementation}{%
-\section{Developpement and
-implementation}\label{developpement-and-implementation}}
+\section{Developpement and implementation}\label{developpement-and-implementation}}
 
 \begin{frame}{Benchmark definition}
 \protect\hypertarget{benchmark-definition}{}
@@ -177,6 +194,8 @@ Implementing the framework in the RTOS kernel.
 
 \end{frame}
 
+%%%
+
 \begin{frame}{Extension approach}
 
 Implementing the framework as a RTOS extension.
@@ -190,6 +209,8 @@ Implementing the framework as a RTOS extension.
 \end{itemize}
 
 \end{frame}
+
+%%%
 
 \begin{frame}{Devices approach}
 
@@ -240,25 +261,82 @@ Implementing the framework with external devices.
 %%%
 
 \begin{frame}{Overhead measurements}
-\protect\hypertarget{overhead-measurements}{}
-
-TODO comparisons of overhead TODO discussion
-
+  \protect\hypertarget{overhead-measurements}{}
+  \begin{figure}
+    \includegraphics[scale=0.4]{assets/reference-value-overhead-contiki-z1.png}
+    \caption{reference value overhead (Contiki on Z1 board)}
+  \end{figure}
 \end{frame}
-
-%%%
+  
+  %%%
+  
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.4]{assets/extension-framework-overhead-contiki-z1.png}
+    \caption{extension framework overhead (Contiki on Z1 board)}
+  \end{figure}
+\end{frame}
+  
+  %%%
+  
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.4]{assets/devices-framework-overhead-contiki-z1.png}
+    \caption{Devices framework overhead (Contiki on Z1 board)}
+  \end{figure}
+\end{frame}
+  
+  %%%
 
 \begin{frame}{Framework measurements}
-\protect\hypertarget{framework-measurements}{}
+  \protect\hypertarget{framework-measurements}{}
+  \begin{figure}
+    \includegraphics[scale=0.4]{assets/comparison-extension-framework-contiki-remote.pdf}
+    \caption{Extension framework (Contiki on RE-Mote)}
+  \end{figure}
+\end{frame}
 
-TODO assessment of the different approaches
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.4]{assets/comparison-extension-framework-riot-remote.pdf}
+    \caption{Extension framework (RIOT on RE-Mote)}
+  \end{figure}
+\end{frame}
 
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.4]{assets/comparison-devices-framework-contiki-remote.pdf}
+    \caption{Devices framework (Contiki on RE-Mote)}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \includegraphics[scale=0.4]{assets/comparison-devices-framework-riot-remote.pdf}
+    \caption{Devices framework (RIOT on RE-Mote)}
+  \end{figure}
 \end{frame}
 
 %%%
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
+
+%%%
+
+\begin{frame}{Future possible improvements}
+  \protect\hypertarget{future-possible-improvements}{}
+  
+  \begin{itemize}
+  \tightlist
+  \item
+    Add metrics
+  \item
+    Improve the devices framework
+  \end{itemize}
+\end{frame}
+
+%%%
 
 \begin{frame}{Parallel works}
 \protect\hypertarget{parallel-works}{}
@@ -273,21 +351,6 @@ Embench (June 11th, 2019)
 
 Embench: Recruiting for the Long Overdue and Deserved Demise of
 Dhrystone as a Benchmark for Embedded Computing by Prof David Patterson
-
-\end{frame}
-
-%%%
-
-\begin{frame}{Future possible improvements}
-\protect\hypertarget{future-possible-improvements}{}
-
-\begin{itemize}
-\tightlist
-\item
-  Add metrics
-\item
-  Improve the devices framework
-\end{itemize}
 
 \end{frame}
 
